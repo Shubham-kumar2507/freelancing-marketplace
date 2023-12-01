@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements - Freelancer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fca6a6;
+            color: #333;
+        }
+
+        header {
+            background-color: #c8f590;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h1, h2 {
+            color: #007bff;
+        }
+
+        .achievement {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+
+        .achievement h3 {
+            color: #007bff;
+        }
+
+        .achievement p {
+            line-height: 1.6;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Achievements</h1>
+    </header>
+
+    <section>
+        <div class="achievement">
+            <h3>Project Completion</h3>
+            <p>
+                Successfully completed 50+ projects for clients worldwide, ranging from small business websites 
+                to complex web applications.
+            </p>
+            <button onclick="showModal('Project Completion', 'Successfully completed 50+ projects for clients worldwide, ranging from small business websites to complex web applications.')">Learn More</button>
+        </div>
+
+        <div class="achievement">
+            <h3>Certifications</h3>
+            <p>
+                Obtained certifications in web development technologies, including HTML5, CSS3, JavaScript, and React, 
+                to stay up-to-date with the latest industry standards.
+            </p>
+            <button onclick="showModal('Certifications', 'Obtained certifications in web development technologies, including HTML5, CSS3, JavaScript, and React, to stay up-to-date with the latest industry standards.')">Learn More</button>
+        </div>
+
+        <!-- Add more achievements as needed -->
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title"></h2>
+                <p id="modal-content"></p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function showModal(title, content) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-content').textContent = content;
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

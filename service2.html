@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Freelancer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ff8787;
+            color: #333;
+        }
+
+        header {
+            background-color: #ffa600;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h1, h2 {
+            color: #007bff;
+        }
+
+        .service {
+            margin-bottom: 20px;
+        }
+
+        .service h3 {
+            color: #007bff;
+        }
+
+        .service p {
+            line-height: 1.6;
+        }
+
+        button {
+            background-color: #95f4fd;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #f4d694;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Services</h1>
+    </header>
+
+    <section>
+        <div class="service">
+            <h3>Web Development</h3>
+            <p>
+                I offer professional web development services, creating responsive and user-friendly websites 
+                tailored to your business needs. From front-end to back-end development, I've got you covered.
+            </p>
+            <button onclick="showDetails('web-development')">Learn More</button>
+        </div>
+
+        <div class="service">
+            <h3>Graphic Design</h3>
+            <p>
+                Need eye-catching graphics for your brand? I provide graphic design services, including logo 
+                design, marketing materials, and social media graphics to enhance your brand identity.
+            </p>
+            <button onclick="showDetails('graphic-design')">Learn More</button>
+        </div>
+
+        
+
+        <div id="web-development-details" style="display: none;">
+            <h2>Web Development Details</h2>
+            <p>
+                I specialize in creating dynamic and interactive websites using the latest technologies 
+                such as HTML5, CSS3, and JavaScript. Whether you need a simple portfolio site or a complex 
+                e-commerce platform, I can bring your vision to life.
+            </p>
+        </div>
+
+        <div id="graphic-design-details" style="display: none;">
+            <h2>Graphic Design Details</h2>
+            <p>
+                My graphic design services focus on creating visually appealing and brand-consistent 
+                materials. I use industry-standard tools to design logos, brochures, business cards, and 
+                social media graphics that leave a lasting impression.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        function showDetails(service) {
+            // Hide all service details
+            document.getElementById('web-development-details').style.display = 'none';
+            document.getElementById('graphic-design-details').style.display = 'none';
+
+            // Show the selected service details
+            document.getElementById(service + '-details').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
